@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -6,19 +7,33 @@
     <title>Такси Днепр — 23:30–05:00</title>
     <meta name="description" content="Такси Днепр. Работаем ежедневно с 22:30 до 05:00. Трезвый водитель, доставка, междугородние поездки и автопомощь.">
     <meta name="google-site-verification" content="pVo0Giv9cALz7CWtMi4gGS9GRE8QKJlRGiaOsa0UUqA" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18443340863"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18443340863');
+    </script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #0b0b0b;
             color: #fff;
         }
+
         a { text-decoration: none; color: inherit; }
 
         header {
             position: fixed;
-            top: 0; left: 0; width: 100%;
+            top: 36px;
+            left: 0;
+            width: 100%;
             z-index: 1000;
             background: rgba(10,10,10,.9);
             backdrop-filter: blur(12px);
@@ -46,7 +61,7 @@
 
         .hero {
             min-height: 100vh;
-            padding: 150px 25px 80px;
+            padding: 186px 25px 80px;
             display: flex;
             align-items: center;
             background:
@@ -55,7 +70,11 @@
                 center/cover no-repeat;
         }
 
-        .hero-content { max-width: 1200px; width: 100%; margin: auto; }
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
 
         .badge {
             display: inline-block;
@@ -102,8 +121,15 @@
             transition: .3s;
         }
 
-        .btn-primary { background: #ffc400; color: #000; }
-        .btn-primary:hover { transform: translateY(-3px); background: #ffd43b; }
+        .btn-primary {
+            background: #ffc400;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #ffd43b;
+        }
 
         .btn-secondary {
             background: rgba(255,255,255,.1);
@@ -116,7 +142,11 @@
         }
 
         section { padding: 100px 25px; }
-        .container { max-width: 1200px; margin: auto; }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
 
         .section-title {
             text-align: center;
@@ -153,9 +183,20 @@
             border-color: #ffc400;
         }
 
-        .service-icon { font-size: 45px; margin-bottom: 20px; }
-        .service h3 { font-size: 24px; margin-bottom: 12px; }
-        .service p { color: #999; line-height: 1.6; }
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .service p {
+            color: #999;
+            line-height: 1.6;
+        }
 
         .service-photo {
             padding: 0;
@@ -213,8 +254,16 @@
             text-align: center;
         }
 
-        .cta h2 { font-size: 55px; margin-bottom: 20px; }
-        .cta p { color: #aaa; font-size: 19px; margin-bottom: 30px; }
+        .cta h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: #aaa;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
 
         .big-phone {
             display: block;
@@ -239,8 +288,17 @@
             border: 1px solid #252525;
         }
 
-        .stars { color: #ffc400; font-size: 20px; margin-bottom: 15px; }
-        .review p { color: #bbb; line-height: 1.7; margin-bottom: 20px; }
+        .stars {
+            color: #ffc400;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .review p {
+            color: #bbb;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
 
         .contact { text-align: center; }
 
@@ -264,44 +322,6 @@
         footer strong { color: #ffc400; }
 
         .mobile-call { display: none; }
-
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .advantages-grid { grid-template-columns: repeat(2, 1fr); }
-            .reviews-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 600px) {
-            .hero { padding-top: 130px; }
-            .hero h1 { font-size: 48px; }
-            .hero p { font-size: 17px; }
-            section { padding: 70px 20px; }
-            .section-title { font-size: 36px; }
-            .services-grid { grid-template-columns: 1fr; }
-            .advantages-grid { grid-template-columns: 1fr 1fr; }
-            .cta h2 { font-size: 38px; }
-
-            .mobile-call {
-                display: flex;
-                position: fixed;
-                bottom: 15px;
-                left: 15px;
-                right: 15px;
-                height: 58px;
-                background: #ffc400;
-                color: #000;
-                border-radius: 15px;
-                align-items: center;
-                justify-content: center;
-                font-size: 18px;
-                font-weight: 900;
-                z-index: 9999;
-                box-shadow: 0 5px 30px rgba(0,0,0,.5);
-            }
-
-            footer { padding-bottom: 100px; }
-        }
 
         .top-marquee {
             position: fixed;
@@ -334,21 +354,18 @@
             padding-right: 70px;
         }
 
-        .top-marquee-item .sep {
-            font-size: 18px;
-        }
+        .top-marquee-item .sep { font-size: 18px; }
 
         @keyframes marquee {
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
 
-        header {
-            top: 36px;
-        }
-
-        .hero {
-            padding-top: 186px;
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 600px) {
@@ -357,15 +374,39 @@
                 font-size: 12px;
             }
 
-            header {
-                top: 34px;
+            header { top: 34px; }
+
+            .hero { padding-top: 164px; }
+            .hero h1 { font-size: 48px; }
+            .hero p { font-size: 17px; }
+
+            section { padding: 70px 20px; }
+            .section-title { font-size: 36px; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .advantages-grid { grid-template-columns: 1fr 1fr; }
+            .cta h2 { font-size: 38px; }
+
+            .mobile-call {
+                display: flex;
+                position: fixed;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+                height: 58px;
+                background: #ffc400;
+                color: #000;
+                border-radius: 15px;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: 900;
+                z-index: 9999;
+                box-shadow: 0 5px 30px rgba(0,0,0,.5);
             }
 
-            .hero {
-                padding-top: 164px;
-            }
+            footer { padding-bottom: 100px; }
         }
-
     </style>
 </head>
 
@@ -381,6 +422,7 @@
                 🕐 ЕЖЕДНЕВНО 23:30 — 05:00
                 <span class="sep">•</span>
             </div>
+
             <div class="top-marquee-item">
                 🌙 НОЧНОЕ ТАКСИ ДНЕПР
                 <span class="sep">•</span>
@@ -392,232 +434,262 @@
         </div>
     </div>
 
+    <header>
+        <div class="nav">
+            <div class="logo">TAXI <span>ДНІПРО</span></div>
 
-<header>
-    <div class="nav">
-        <div class="logo">TAXI <span>ДНІПРО</span></div>
+            <nav class="nav-links">
+                <a href="#services">Услуги</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
 
-        <nav class="nav-links">
-            <a href="#services">Услуги</a>
-            <a href="#advantages">Преимущества</a>
-            <a href="#reviews">Отзывы</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+            <a class="phone" href="tel:+380685268438">
+                +380 68 526 84 38
+            </a>
+        </div>
+    </header>
 
-        <a class="phone" href="tel:+380685268438">+380 68 526 84 38</a>
-    </div>
-</header>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                🌙 Работаем ежедневно: 23:30 — 05:00
+            </div>
 
-<section class="hero">
-    <div class="hero-content">
-        <div class="badge">🌙 Работаем ежедневно: 23:30 — 05:00</div>
+            <h1>
+                Ночное такси<br>
+                в <span>Днепре</span>
+            </h1>
 
-        <h1>
-            Ночное такси<br>
-            в <span>Днепре</span>
-        </h1>
+            <p>
+                Быстро, комфортно и безопасно.
+                Такси по городу, трезвый водитель,
+                доставка, междугородние поездки
+                и помощь автомобилистам.
+            </p>
 
+            <div class="buttons">
+                <a href="tel:+380685268438" class="btn btn-primary">
+                    📞 Вызвать такси
+                </a>
+
+                <a href="https://t.me/drivergo_911"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    💬 Написать в Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-subtitle">
+                Помогаем решить любые транспортные задачи
+            </p>
+
+            <div class="services-grid">
+
+                <div class="service service-photo">
+                    <img src="https://img.magnific.com/free-photo/yellow-black-sign-taxi-placed-top-car-night_181624-10624.jpg?semt=ais_hybrid&w=740&q=80"
+                         alt="Такси">
+                    <div class="overlay">
+                        <div class="service-icon">🚕</div>
+                        <h3>Такси</h3>
+                        <p>
+                            Быстро доставим вас в любую точку
+                            Днепра в часы нашей работы.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service service-photo">
+                    <img src="https://img.magnific.com/free-photo/man-driving-with-his-girlfriend_23-2148714922.jpg?semt=ais_hybrid&w=740&q=80"
+                         alt="Трезвый водитель">
+                    <div class="overlay">
+                        <div class="service-icon">🚗</div>
+                        <h3>Трезвый водитель</h3>
+                        <p>
+                            Доставим вас домой на вашем автомобиле,
+                            если вы не можете или не хотите садиться за руль.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service service-photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMG6LgXl6_yiR86wiN2Vml__M8bnIyxIrEzpyMYls9Cxhtm5qlW5WhQnXI&s=10"
+                         alt="Доставка">
+                    <div class="overlay">
+                        <div class="service-icon">📦</div>
+                        <h3>Доставка</h3>
+                        <p>
+                            Продукты, алкоголь, лекарства, цветы
+                            и другие заказы.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service service-photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXYbM0bSb784Dj9_BQCIWc0uIZmXv7c9p5E5ViJybSqt5rlvFvIsTj8XM&s=10"
+                         alt="Междугородняя поездка">
+                    <div class="overlay">
+                        <div class="service-icon">🛣️</div>
+                        <h3>Междугородние поездки</h3>
+                        <p>Поездки из Днепра в другие города.</p>
+                    </div>
+                </div>
+
+                <div class="service service-photo">
+                    <img src="https://img.magnific.com/premium-photo/tow-truck-with-flashing-lights-stands-wet-asphalt-heavy-rainstorm-night-scene_94120-13105.jpg?semt=ais_hybrid&w=740&q=80"
+                         alt="Автопомощь">
+                    <div class="overlay">
+                        <div class="service-icon">🔧</div>
+                        <h3>Автопомощь</h3>
+                        <p>Помощь на дороге и шиномонтаж.</p>
+                    </div>
+                </div>
+
+                <div class="service service-photo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxRE6DtDMmduV_EZZCVhQ0iG5W__17zIXoEcd6laSzaHlskLPXCthj2A&s=10"
+                         alt="Заберём автомобиль">
+                    <div class="overlay">
+                        <div class="service-icon">🚘</div>
+                        <h3>Заберём ваше авто</h3>
+                        <p>Доставим автомобиль на СТО или в нужное место.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему мы?</h2>
+            <p class="section-subtitle">Удобный ночной сервис в Днепре</p>
+
+            <div class="advantages-grid">
+                <div class="advantage">
+                    <strong>23:30</strong>
+                    <span>Начало работы</span>
+                </div>
+
+                <div class="advantage">
+                    <strong>05:00</strong>
+                    <span>Окончание работы</span>
+                </div>
+
+                <div class="advantage">
+                    <strong>⚡</strong>
+                    <span>Быстрая подача</span>
+                </div>
+
+                <div class="advantage">
+                    <strong>✓</strong>
+                    <span>Безопасные поездки</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Нужно такси?</h2>
+            <p>Звоните нам с 23:30 до 05:00</p>
+
+            <a href="tel:+380685268438" class="big-phone">
+                +380 68 526 84 38
+            </a>
+
+            <div class="buttons" style="justify-content:center;">
+                <a href="tel:+380685268438" class="btn btn-primary">
+                    📞 Вызвать такси
+                </a>
+
+                <a href="https://t.me/drivergo_911"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    💬 Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <p class="section-subtitle">
+                Ваше доверие — наша главная оценка
+            </p>
+
+            <div class="reviews-grid">
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Очень быстро приехали. Водитель вежливый,
+                        машина чистая. Остался доволен поездкой.
+                    </p>
+                    <strong>Александр</strong>
+                </div>
+
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Заказывала трезвого водителя. Всё прошло
+                        отлично, спокойно доехали домой на моей машине.
+                    </p>
+                    <strong>Марина</strong>
+                </div>
+
+                <div class="review">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        Пользовался доставкой. Всё привезли вовремя.
+                        Спасибо за хорошую работу!
+                    </p>
+                    <strong>Дмитрий</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <p class="section-subtitle">
+                Закажите такси по телефону или напишите нам в Telegram
+            </p>
+
+            <div class="contact-buttons">
+                <a href="tel:+380685268438" class="btn btn-primary">
+                    📞 +380 68 526 84 38
+                </a>
+
+                <a href="https://t.me/drivergo_911"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-secondary">
+                    💬 @drivergo_911
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <p>
-            Быстро, комфортно и безопасно.
-            Такси по городу, трезвый водитель,
-            доставка, междугородние поездки
-            и помощь автомобилистам.
+            © 2026 <strong>Такси Днепр</strong>.
+            Работаем ежедневно с 23:30 до 05:00.
         </p>
+    </footer>
 
-        <div class="buttons">
-            <a href="tel:+380685268438" class="btn btn-primary">
-                📞 Вызвать такси
-            </a>
-
-            <a href="https://t.me/drivergo_911" target="_blank" class="btn btn-secondary">
-                💬 Написать в Telegram
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="services" id="services">
-    <div class="container">
-        <h2 class="section-title">Наши услуги</h2>
-        <p class="section-subtitle">
-            Помогаем решить любые транспортные задачи
-        </p>
-
-        <div class="services-grid">
-
-            <div class="service service-photo">
-                <img src="https://img.magnific.com/free-photo/yellow-black-sign-taxi-placed-top-car-night_181624-10624.jpg?semt=ais_hybrid&w=740&q=80" alt="Такси">
-                <div class="overlay">
-                    <div class="service-icon">🚕</div>
-                    <h3>Такси</h3>
-                    <p>
-                        Быстро доставим вас в любую точку
-                        Днепра в часы нашей работы.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service service-photo">
-                <img src="https://img.magnific.com/free-photo/man-driving-with-his-girlfriend_23-2148714922.jpg?semt=ais_hybrid&w=740&q=80" alt="Трезвый водитель">
-                <div class="overlay">
-                    <div class="service-icon">🚗</div>
-                    <h3>Трезвый водитель</h3>
-                    <p>
-                        Доставим вас домой на вашем автомобиле,
-                        если вы не можете или не хотите садиться за руль.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service service-photo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMG6LgXl6_yiR86wiN2Vml__M8bnIyxIrEzpyMYls9Cxhtm5qlW5WhQnXI&s=10" alt="Доставка">
-                <div class="overlay">
-                    <div class="service-icon">📦</div>
-                    <h3>Доставка</h3>
-                    <p>
-                        Продукты, алкоголь, лекарства, цветы
-                        и другие заказы.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service service-photo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXYbM0bSb784Dj9_BQCIWc0uIZmXv7c9p5E5ViJybSqt5rlvFvIsTj8XM&s=10" alt="Междугородняя поездка">
-                <div class="overlay">
-                    <div class="service-icon">🛣️</div>
-                    <h3>Междугородние поездки</h3>
-                    <p>Поездки из Днепра в другие города.</p>
-                </div>
-            </div>
-
-            <div class="service service-photo">
-                <img src="https://img.magnific.com/premium-photo/tow-truck-with-flashing-lights-stands-wet-asphalt-heavy-rainstorm-night-scene_94120-13105.jpg?semt=ais_hybrid&w=740&q=80" alt="Автопомощь">
-                <div class="overlay">
-                    <div class="service-icon">🔧</div>
-                    <h3>Автопомощь</h3>
-                    <p>Помощь на дороге и шиномонтаж.</p>
-                </div>
-            </div>
-
-            <div class="service service-photo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxRE6DtDMmduV_EZZCVhQ0iG5W__17zIXoEcd6laSzaHlskLPXCthj2A&s=10" alt="Заберём автомобиль">
-                <div class="overlay">
-                    <div class="service-icon">🚘</div>
-                    <h3>Заберём ваше авто</h3>
-                    <p>Доставим автомобиль на СТО или в нужное место.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="advantages">
-    <div class="container">
-        <h2 class="section-title">Почему мы?</h2>
-        <p class="section-subtitle">Удобный ночной сервис в Днепре</p>
-
-        <div class="advantages-grid">
-            <div class="advantage">
-                <strong>23:30</strong>
-                <span>Начало работы</span>
-            </div>
-
-            <div class="advantage">
-                <strong>05:00</strong>
-                <span>Окончание работы</span>
-            </div>
-
-            <div class="advantage">
-                <strong>⚡</strong>
-                <span>Быстрая подача</span>
-            </div>
-
-            <div class="advantage">
-                <strong>✓</strong>
-                <span>Безопасные поездки</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-        <h2>Нужно такси?</h2>
-        <p>Звоните нам с 23:30 до 05:00</p>
-
-        <a href="tel:+380685268438" class="big-phone">
-            +380 68 526 84 38
-        </a>
-
-        <div class="buttons" style="justify-content:center;">
-            <a href="tel:+380685268438" class="btn btn-primary">
-                📞 Вызвать такси
-            </a>
-
-            <a href="https://t.me/drivergo_911" target="_blank" class="btn btn-secondary">
-                💬 Telegram
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="reviews" id="reviews">
-    <div class="container">
-        <h2 class="section-title">Отзывы клиентов</h2>
-        <p class="section-subtitle">Ваше доверие — наша главная оценка</p>
-
-        <div class="reviews-grid">
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>Очень быстро приехали. Водитель вежливый, машина чистая. Остался доволен поездкой.</p>
-                <strong>Александр</strong>
-            </div>
-
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>Заказывала трезвого водителя. Всё прошло отлично, спокойно доехали домой на моей машине.</p>
-                <strong>Марина</strong>
-            </div>
-
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>Пользовался доставкой. Всё привезли вовремя. Спасибо за хорошую работу!</p>
-                <strong>Дмитрий</strong>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contacts">
-    <div class="container">
-        <h2 class="section-title">Свяжитесь с нами</h2>
-        <p class="section-subtitle">
-            Закажите такси по телефону или напишите нам в Telegram
-        </p>
-
-        <div class="contact-buttons">
-            <a href="tel:+380685268438" class="btn btn-primary">
-                📞 +380 68 526 84 38
-            </a>
-
-            <a href="https://t.me/drivergo_911" target="_blank" class="btn btn-secondary">
-                💬 @drivergo_911
-            </a>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>
-        © 2026 <strong>Такси Днепр</strong>.
-        Работаем ежедневно с 23:30 до 05:00.
-    </p>
-</footer>
-
-<a href="tel:+380685268438" class="mobile-call">
-    📞 ВЫЗВАТЬ ТАКСИ
-</a>
+    <a href="tel:+380685268438" class="mobile-call">
+        📞 ВЫЗВАТЬ ТАКСИ
+    </a>
 
 </body>
 </html>
+
